@@ -4,9 +4,7 @@ import '../styles/PhotoListItem.scss';
 import PhotoFavButton from './PhotoFavButton';
 
 const PhotoListItem = (props) => {
-  /* initial props display
-  { props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
-  replace p tag with img 
+  /*{ props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
   call the fav button function*/
   <>
     <PhotoFavButton />
