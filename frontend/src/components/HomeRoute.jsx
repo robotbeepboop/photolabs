@@ -4,12 +4,11 @@ import PhotoList from './components/PhotoList';
 import './HomeRoute.scss';
 
 //render home page with the photos
-const HomeRoute = () => {
-  console.log(photos);
+const HomeRoute = (props) => {
   return (
     <div className='home-route'>
       <div className='photo-list'>
-        <PhotoList props={photos} />
+        <PhotoList props={photos} setLikes={props.setLikes} />
       </div>
     </div>
   )
