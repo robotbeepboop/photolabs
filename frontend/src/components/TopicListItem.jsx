@@ -3,9 +3,15 @@ import '../styles/TopicListItem'
 
 const TopicListItem = (props) => {
   /*extract the label for the topic */
-  <div className="topic-list--item">
-    <h3>{ props.label }</h3>
-  </div>
+  const { id, label, link } = props;
+
+  return (
+    <div className="topic-list--item">
+      <a key={ id } id={ id } label={ label } href={ link }>
+        <h3>{ label }</h3>
+      </a>
+    </div>);
+  
 }
 
 TopicListItem.defaultProps = {
