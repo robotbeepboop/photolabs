@@ -1,14 +1,15 @@
 import React from 'react';
 import '../styles/PhotoListItem.scss';
+/* make photo able to be 'liked' */
+import PhotoFavButton from './PhotoFavButton';
 
 const PhotoListItem = (props) => {
-  /* initial props display */
+  /* initial props display
   { props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
-  <div className='photo-list--item'>
-    <p>{ props.username }</p>
-    <p>{ props.imageSource }</p>
-    <p>{ props.id }</p>
-  </div>
+  replace p tag with img 
+  call the fav button function*/
+  <PhotoFavButton />
+   <img className='photo-list-item' src={ props.imageSource } />
 }
 
 PhotoListItem.defaultProps = {
