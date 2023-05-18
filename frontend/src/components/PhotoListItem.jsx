@@ -8,8 +8,10 @@ const PhotoListItem = (props) => {
   { props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
   replace p tag with img 
   call the fav button function*/
-  <PhotoFavButton />
-   <img className='photo-list-item' src={ props.imageSource } />
+  <>
+    <PhotoFavButton />
+    <img className='photo-list-item' src={ props.imageSource } />
+  </>
 }
 
 PhotoListItem.defaultProps = {
