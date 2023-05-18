@@ -6,9 +6,10 @@ import PhotoFavButton from './PhotoFavButton';
 const PhotoListItem = (props) => {
   /*{ props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
   call the fav button function*/
+  const { username, imageSource, id, hideUserName } = props;
   <>
     <PhotoFavButton />
-    <img className='photo-list-item' src={ props.imageSource } />
+    <img className='photo-list-item' src={ imageSource } />
   </>
 }
 
