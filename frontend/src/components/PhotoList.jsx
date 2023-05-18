@@ -8,7 +8,8 @@ const PhotoList = (props) => {
     username={ photo.username }
     imageSource={ photo.imageSource }
     key={ photo.id }
-    hideUserName={ photo.hideUserName }/>;
+    hideUserName={ photo.hideUserName }
+    numOfLikes={ photo.setLikes }/>;
   });
 
   return (
