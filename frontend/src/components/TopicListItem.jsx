@@ -1,10 +1,10 @@
 import React from 'react';
-
 import '../styles/TopicListItem'
 
-const TopicListItem = () => {
+const TopicListItem = (props) => {
+  /*extract the label for the topic */
   <div className="topic-list--item">
-    {/* Insert React */}
+    <h3>{ props.label }</h3>
   </div>
 }
 
