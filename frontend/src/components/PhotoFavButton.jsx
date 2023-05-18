@@ -9,7 +9,7 @@ function PhotoFavButton() {
   
   return (
     /* change fav state to true and make the favicon red */
-    <div className="photo-list--fav-icon" onClick={(() => {setFav(!fav);, [ fav ])}>
+    <div className="photo-list--fav-icon" onClick={(() => {setFav(!fav);}, [ fav ])}>
       <div className="photo-list--fav-icon-svg">
         <FavIcon fill={ fav === true ? '#800020' : '#D3D3D3' } />
       </div>
