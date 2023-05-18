@@ -9,7 +9,7 @@ const PhotoListItem = (props) => {
   const { username, imageSource, id, hideUserName } = props;
   <>
     <PhotoFavButton />
-    <img className='photo-list-item' src={ imageSource } />
+    <img className='photo-list--item' src={ imageSource } />
   </>
 }
 
