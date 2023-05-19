@@ -2,6 +2,7 @@ import React from 'react';
 import './TopicList.scss';
 import TopicListItem from './TopicListItem';
 
+//removed default props
 const TopicList = (props) => {
   const mappedTopics = props.topics.map((topic) => {
     return <TopicListItem 
