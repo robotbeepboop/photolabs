@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import photos from '../mocks/photos';
 import PhotoList from './components/PhotoList';
 import './HomeRoute.scss';
