@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import TopNavigation from './components/TopNavigationBar';
 import './App.scss';
 import HomeRoute from './components/HomeRoute';
+/*mock data */
+import photoData from './mocks/photos.json';
+import topicData from './mocks/topics.json';
 
 // Note: Rendering a single component to build components in isolation
-const App = () => {
-  const [likes, setLikes] = useState(0);
 
+const App = () => {
   return (
-    <div className="App">
-    <TopNavigation likes={ likes } />
-    <HomeRoute setLikes={ setLikes } />
-  </div>);
-  
+    <div className='App'>
+      <HomeRoute photos={photoData} topics={topicData} />
+    </div>
+  );
 }
 
 export default App
