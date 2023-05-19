@@ -1,15 +1,14 @@
 import React from 'react';
-import FavBadge from './components/FavBadge';
+import FavIcon from './components/FavIcon';
 import TopicList from './TopicList';
-import topics from '../mocks/topics'
 import '../styles/TopNavigationBar.scss'
 
 const TopNavigation = (props) => {
   return (
     <div className="top-nav-bar">
       <span className="top-nav-bar--logo">PhotoLabs</span>
-      <TopicList topics={topics}/>
-      <FavBadge />
+      <TopicList photos={ props.photos } topics={ props.topics }/>
+      <FavIcon />
     </div>
   )
 }
