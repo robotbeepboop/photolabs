@@ -6,18 +6,11 @@ import PhotoFavButton from './PhotoFavButton';
 const PhotoListItem = (props) => {
   /*{ props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
   call the fav button function*/
-  const { username, imageSource, id, hideUserName } = props;
-  <>
-    <PhotoFavButton />
-    <img className='photo-list--item' src={ imageSource } />
-  </>
-}
-
-PhotoListItem.defaultProps = {
-  username: 'Jacob',
-  imageSource: `${ process.env.PUBLIC_URL }/Image.jpg`,
-  id: 1,
-  hideUserName: false,
+  const { username, imageSource, key, id, hideUsername, likes, checkLikes } = props;
+  <div className='photo-list--item'>
+    <PhotoFavButton id={ id } likes={ likes } checkLikes={ checkLikes }/>
+    <img className='photo-list--item-photo' src={ imageSource } />
+  </div>
 }
 
 export default PhotoListItem
