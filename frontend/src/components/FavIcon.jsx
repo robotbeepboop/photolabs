@@ -3,16 +3,7 @@ import React, { useState } from 'react';
 export function FavIcon({
   width, height, fill, outlineWidth, stroke, displayAlert
 }) {
-  const [liked, setLiked] = useState(false);
-
-  const likeButton = () => {
-    setLiked(!liked);
-    if (liked === true) {
-      setLikes(likes => likes--);
-    }
-    setLikes(likes => likes++);
-  };
-
+  
   return (
     /*
     .photo-list--fav-icon
