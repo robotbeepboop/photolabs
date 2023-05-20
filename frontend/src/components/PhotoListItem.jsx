@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/PhotoListItem.scss';
-/* make photo able to be 'liked' */
-import PhotoFavButton from './PhotoFavButton';
+import FavIcon from './FavIcon';
 
 const PhotoListItem = (props) => {
-  /*{ props.hideUserName === true && <div><p>{ props.imageSource }</p><p>{ props.id }</p></div>}
-  call the fav button function*/
-  const { username, imageSource, key, id, hideUsername, likes, checkLikes } = props;
-  <div className='photo-list--item'>
-    <PhotoFavButton id={ id } likes={ likes } checkLikes={ checkLikes }/>
-    <img className='photo-list--item-photo' src={ imageSource } />
-  </div>
+  return (
+    <div className='photo-list--item'>
+      <button onClick={ clickHandler }>
+        <FavIcon />
+      </button>
+      <img className='photo-list--image' src={ props.imageSource } alt={ props.photo.description } onClick={ props.clickHandler(props.photo) } />
+      <p>{ props.photo.user.username }</p>
+      <p>Location: { props.photo.location.city }, { props.photo.location.country }</p>
+    </div>
+  );
 }
 
 export default PhotoListItem
