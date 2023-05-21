@@ -5,10 +5,9 @@ import photoData from './mocks/photos.json';
 import topicData from './mocks/topics.json';
 
 const App = () =>{
-  const [favourites, setFavourites] = useState(0);
   return (
     <div className='App'>
-      <HomeRoute photos={ photoData } topics={ topicData } favourites={ favourites } setFavourites={ setFavourites } />
+      <HomeRoute photos={ photoData } topics={ topicData } />
     </div>
   );
 }
