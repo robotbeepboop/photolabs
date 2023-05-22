@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import '../styles/PhotoListItem.scss';
-import FavIcon from './FavIcon';
+import FavPhotoButton from './FavFavPhotoButton';
 
 const PhotoListItem = (props) => {
+  const clickHandler = () => {
+    viewModal();
+  };
+  
   return (
     <div className='photo-list--item'>
       <button onClick={ clickHandler }>
-        <FavIcon />
+        <FavPhotoButton />
       </button>
       <img className='photo-list--image' src={ props.imageSource } alt={ props.photo.description } onClick={ props.clickHandler(props.photo) } />
       <p>{ props.photo.user.username }</p>
