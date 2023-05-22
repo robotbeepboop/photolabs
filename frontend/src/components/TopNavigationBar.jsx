@@ -1,5 +1,5 @@
 import React from 'react';
-import FavIcon from './FavIcon';
+import FavBadge from './FavBadge';
 import TopicList from './TopicList';
 import '../styles/TopNavigationBar.scss'
 
@@ -8,7 +8,7 @@ const TopNavigation = (props) => {
     <div className="top-nav-bar">
       <span className="top-nav-bar--logo">PhotoLabs</span>
       <TopicList topics={ props.topics } />
-      <FavIcon />
+      <FavBadge />
     </div>
   )
 }
