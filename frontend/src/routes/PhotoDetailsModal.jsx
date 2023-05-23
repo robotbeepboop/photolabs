@@ -22,7 +22,7 @@ export const PhotoDetailsModal = (props) => {
           </defs>
         </svg>
       </button>
-      <PhotoFavButton favourites={ favourites } photo_id={ photoData[0].id } />
+      <PhotoFavButton toggleFavs={ toggleFavs } photo_id={ photoData[0].id } />
         <img src={ photoData[0].user.profile } />
         <p>{ photoData[0].user.name }</p>
         <img src={ photoData[0].urls.raw } />
