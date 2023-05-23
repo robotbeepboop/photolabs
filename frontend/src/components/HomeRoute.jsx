@@ -1,3 +1,6 @@
+/*
+delete this file later, code moved to app.jsx
+
 import React from 'react';
 import TopNavigationBar from '../components/TopNavigationBar';
 import PhotoList from '../components/PhotoList';
@@ -7,7 +10,6 @@ const HomeRoute = (props) => {
   const [favourites, setFavourites] = useState([]); //use array, not object. remember class example ***
   const [viewModal, setViewModal] = useState(false);
   
-  /* add or remove a photo from favourites array */
   const toggleFavs = (photo_id) => {
     const newFavourites = [];
     if  (!favourites.includes(photo_id)) { //spread operator to gather the rest of the likes
@@ -19,7 +21,6 @@ const HomeRoute = (props) => {
     setFavourites(newFavourites);
   };
   
-  /* modal toggle funcs */
   const openModalHandler = () => {
      setViewModal(true);
   };
@@ -37,3 +38,4 @@ const HomeRoute = (props) => {
 };
 
 export default HomeRoute;
+*/
