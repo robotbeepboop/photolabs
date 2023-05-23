@@ -1,29 +1,41 @@
-export const ACTIONS = {
-  FAV_PHOTO_ADDED: 'FAV_PHOTO_ADDED',
-  FAV_PHOTO_REMOVED: 'FAV_PHOTO_REMOVED',
-  SET_PHOTO_DATA: 'SET_PHOTO_DATA',
-  SET_TOPIC_DATA: 'SET_TOPIC_DATA',
-  SELECT_PHOTO: 'SELECT_PHOTO',
-  DISPLAY_PHOTO_DETAILS: 'DISPLAY_PHOTO_DETAILS'
-}
+import { useState } from "react";
 
-function reducer(state, action) {
-  switch (action.type) {
-    case FAV_PHOTO_ADDED:
-      return;
-    case FAV_PHOTO_REMOVED:
-      return;
-    case SET_PHOTO_DATA:
-      return;
-    case SET_TOPIC_DATA:
-      return;
-    case SELECT_PHOTO:
-      return;
-    case DISPLAY_PHOTO_DETAILS:
-      return;
-    default:
-      throw new Error(
-        `Tried to reduce with unsupported action type: ${action.type}`
-      );
-  }
+function useApplicationData() {
+  const [ favourites, setFavourites ] = useState([]); //use array, not object. remember class example ***
+  const [ viewModal, setViewModal ] = useState(false);
+  const [ favPhotoExist, setFavPhotoExist ] = useState(false);
+  
+  
+  const toggleFavs = (photo_id) => {
+    const newFavourites = [];
+    if  (!favourites.includes(photo_id)) {
+      newFavourites = [...favourites, photo_id];
+    } else {
+      newFavourites = favourites.filter(photo => photo !== photo_id);
+    }
+    
+    setFavourites(newFavourites);
+  };
+  
+  const openModalHandler = () => {
+     setViewModal(true);
+  };
+  
+  const closeModalHandler = () => {
+    setViewModal(false);
+  };
+  
+  const appData = {
+    favourites,
+    setFavourites,
+    viewModal,
+    setViewModal,
+    favPhotoExist,
+    setFavPhotoExist,
+    toggleFavs,
+    openModalHandler,
+    closeModalHandler
+  };
+
+  return appData;
 }
