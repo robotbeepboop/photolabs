@@ -1,10 +1,12 @@
 import React from 'react';
+import '../styles/PhotoDetailsModal.scss';
 import PhotoFavButton from '../components/PhotoFavButton';
-import '../styles/PhotoDetailsModal.scss'
+import PhotoList from '../components/PhotoList';
 
-export const PhotoDetailsModal = () => (
-  <PhotoFavButton />
-  
+export const PhotoDetailsModal = (props) => {
+
+  const photoData = props.photos.filter(photo => photo.id === props.selectedPhoto);
+
   return (
     <div className='photo-details-modal'>
       <button className='photo-details-modal--close-button'>
@@ -20,8 +22,16 @@ export const PhotoDetailsModal = () => (
           </defs>
         </svg>
       </button>
+      <PhotoFavButton favourites={ favourites } photo_id={ photoData[0].id } />
+        <img src={ photoData[0].user.profile } />
+        <p>{ photoData[0].user.name }</p>
+        <img src={ photoData[0].urls.raw } />
+        <p>{ photoData[0].location.city }, { photoData[0].location.country }</p>
+        <br />
+        <p>Similar photos: </p>
+        <PhotoList photos={ photos.slice(0,5) } />
     </div>
   );
-)
+}
 
 export default PhotoDetailsModal;
