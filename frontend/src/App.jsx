@@ -32,6 +32,8 @@ const App = () => {
       <HomeRoute
       photos={ photos }
       topics={ topics }
+      selectedPhoto={ selectedPhoto }
+      selectedTopic={ selectedTopic }
       selectPhoto={ selectPhoto }
       selectTopic={ selectTopic }
       favourites={ favourites }
