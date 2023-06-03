@@ -39,3 +39,4 @@ function useApplicationData() {
 
   return appData;
 }
+export default useApplicationData;
