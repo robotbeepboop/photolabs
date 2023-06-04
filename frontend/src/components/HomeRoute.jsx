@@ -1,5 +1,4 @@
-/*
-delete this file later, code moved to app.jsx
+
 
 import React from 'react';
 import TopNavigationBar from '../components/TopNavigationBar';
@@ -38,4 +37,3 @@ const HomeRoute = (props) => {
 };
 
 export default HomeRoute;
-*/
